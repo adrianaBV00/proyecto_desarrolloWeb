@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans", sans-serif ;
+}
+
+li>a {
+    color: #222f3e;
+    text-decoration: underline;
+}
+ul{
+    list-style: none;
+}
+.navegador {
+    font-family: "Bebas Neue", sans-serif;
+}
+.actual_page{
+    color: #5f27cd;
+}
+
+#fondo_index{
+    background-image: url("https://as1.ftcdn.net/jpg/04/37/40/24/1000_F_437402478_K3fhy1ryIqHNMCOJeR0GMGYj5BuXhYes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fondo_index .index_text{
+    width: 400px;
+    block-size: 200px;
+    text-align: left;
+    color: aliceblue;
+}
+
+#fondo_nosotros{
+    background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fondo_nosotros .heading_text{
+    width: 400px;
+    block-size: 200px;
+    text-align: left;
+    color: aliceblue;
+}
+#fondo_heading{
+    background-image: url("https://thumb.bibliocad.com/images/content/00050000/9000/59288.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fondo_heading .heading_text{
+    width: 400px;
+    block-size: 200px;
+    text-align: left;
+    color: aliceblue;
+}
+.producto {
+    background-color: rgba(218, 206, 191, 0.438);
+}
+
+.descripcion_producto{
+    font-size: small;
+    color: #576574;
+
+}
+.precio_producto{
+    font-weight: 600;
+    font-size: small;
+}
+
+
+.fa-location-dot{
+    color: rgb(182, 6, 6);
+}
+.fa-brands{
+    color: #222f3e;
+}
+p {
+    font-family: "Noto Sans",sans-serif;
+}
+
+.boton {
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    background-color: #341f97;
+    color: white;
+}
