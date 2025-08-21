@@ -10,6 +10,7 @@ body{
     font-family: "Noto Sans", sans-serif ;
 }
 
+
 li>a {
     color: #222f3e;
     text-decoration: underline;
@@ -17,27 +18,70 @@ li>a {
 ul{
     list-style: none;
 }
-.navegador {
+
+nav {
     font-family: "Bebas Neue", sans-serif;
+    background-color: #D6A2E8;
 }
-.actual_page{
+
+.logo {
+    width: 70px;
+}
+
+.logo img{
+    width: 100%;
+}
+footer{
+    background-color: rgb(241, 245, 245);
+}
+
+header {
+  padding: 10px;
+  top: 0;
+  z-index: 100;
+}
+header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
+  width: 70%;
+  margin: 0 auto;
+}
+.menu-offcanvas {
+  justify-content: space-around;
+}
+
+a .nav-link .active{
     color: #5f27cd;
 }
 
+/* .section_ubicacion{
+    margin-bottom: 100px;
+} */
+
+.ubicacion{
+    align-items: center;
+}
+
+
 #fondo_index{
+    padding: 60px 20px;
     background-image: url("https://as1.ftcdn.net/jpg/04/37/40/24/1000_F_437402478_K3fhy1ryIqHNMCOJeR0GMGYj5BuXhYes.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+#fondo_index h1{
+    color: azure;
+}
+
 #fondo_index .index_text{
-    width: 400px;
-    block-size: 200px;
+    width: 460px;
+    block-size: 400px;
     text-align: left;
     color: aliceblue;
+    align-content: center;
 }
 
 #fondo_nosotros{
+    padding: 80px 20px 0;
     background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -50,16 +94,21 @@ ul{
     color: aliceblue;
 }
 #fondo_heading{
+    padding: 60px 20px 0;
     background-image: url("https://thumb.bibliocad.com/images/content/00050000/9000/59288.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #fondo_heading .heading_text{
-    width: 400px;
+    width: 500px;
     block-size: 200px;
     text-align: left;
     color: aliceblue;
+}
+
+.card img{
+    height: 20vh;
 }
 .producto {
     background-color: rgba(218, 206, 191, 0.438);
@@ -91,4 +140,39 @@ p {
     text-align: center;
     background-color: #341f97;
     color: white;
+}
+
+/* sobre nosotros */
+section.sobre_nosotros .intro{
+    margin: 3% 10%;
+    text-align: center;
+    line-height: 2;
+
+}
+
+
+
+section.sobre_nosotros .info h2{
+    text-align: center;
+    line-height: 3;
+}
+
+section.sobre_nosotros .info p{
+    text-align: justify;
+
+}
+
+/* contactanos */
+
+section.contactanos_formulario{
+    margin: 30px 10%;
+}
+
+/* carrito */
+#carrito .center{
+    text-align: center;
+    margin: 50px 10%;
+}
+#carrito img{
+    height: 40vh;
 }
