@@ -128,7 +128,7 @@ header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
 #fondo_nosotros {
     @extend %fondo_inicio;
     padding: 100px 50px 0;
-    background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
+    // background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
 
     .heading_text {
         @include h_text(400px, 100px, left, $color_fondo_text)
