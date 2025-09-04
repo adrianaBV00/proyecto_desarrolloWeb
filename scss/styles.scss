@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+// fonts
+$font_principal: "Noto Sans", sans-serif;
+$font_nav: "Bebas Neue", sans-serif;
+$font_boton: "Rubik", sans-serif;
+// colores
+$color_link: #222f3e;
+$color_back_nav: #D6A2E8;
+$color_back_foot: rgb(241, 245, 245);
+$color_actual: #5f27cd;
+$color_h1_fondo: azure;
+$color_fondo_text: aliceblue;
+$color_producto_back: rgba(218, 206, 191, 0.438);
+$color_producto_text: #576574;
+$color_ubicacion: rgb(182, 6, 6);
+$color_redes: #222f3e;
+
+$color_boton: #341f97;
+$color_boton_text: white;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font_principal;
+
+}
+
+li>a {
+    color: $color_link;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    font-family: $font_nav;
+    background-color: $color_back_nav;
+    font-size: large;
+}
+
+.logo {
+    width: 70px;
+    margin: 0 50px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+footer {
+    background-color: $color_back_foot;
+
+    .footer {
+        margin-left: 20px;
+    }
+}
+
+header {
+    padding: 10px;
+    top: 0;
+    z-index: 100;
+}
+
+header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.menu-offcanvas {
+    justify-content: space-around;
+}
+
+
+.section_ubicacion {
+    .ubicacion {
+        align-items: center;
+    }
+
+    .ubicacion-i {
+        padding-left: 100px;
+        padding-right: 0px;
+    }
+}
+
+
+
+//
+%fondo_inicio {
+    padding: 60px 50px;
+    background-image: url("https://as1.ftcdn.net/jpg/04/37/40/24/1000_F_437402478_K3fhy1ryIqHNMCOJeR0GMGYj5BuXhYes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin h_text ($width, $height, $t-align, $color) {
+    width: $width;
+    height: $height;
+    text-align: $t-align;
+    color: $color;
+    margin: 50px 0;
+}
+
+
+#fondo_index {
+    @extend %fondo_inicio;
+
+    h1 {
+        margin: 50px 0;
+        color: $color_h1_fondo;
+    }
+
+    .index_text {
+        @include h_text(460px, 300px, left, $color_fondo_text)
+    }
+
+}
+
+
+#fondo_nosotros {
+    @extend %fondo_inicio;
+    padding: 100px 50px 0;
+    background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
+
+    .heading_text {
+        @include h_text(400px, 100px, left, $color_fondo_text)
+    }
+}
+
+#fondo_heading {
+    @extend %fondo_inicio;
+    padding: 80px 50px 0;
+    // background-image: url("https://thumb.bibliocad.com/images/content/00050000/9000/59288.jpg");
+
+    .heading_text {
+        @include h_text(500px, 100px, left, $color_fondo_text)
+    }
+}
+
+.card {
+    padding: 10px;
+
+    img {
+        height: 20vh;
+    }
+}
+
+
+.precio-b {
+    align-items: baseline;
+}
+
+.producto {
+    background-color: $color_producto_back;
+}
+
+.descripcion_producto {
+    font-size: small;
+    color: $color_producto_text;
+
+}
+
+.precio_producto {
+    font-weight: 600;
+    font-size: small;
+}
+
+
+.fa-location-dot {
+    color: $color_ubicacion;
+}
+
+.fa-brands {
+    color: $color_redes;
+}
+
+p {
+    font-family: $font_principal;
+}
+
+.boton {
+    font-family: $font_boton;
+    text-align: center;
+    background-color: $color_boton;
+    color: $color_boton_text;
+}
+
+
+@mixin lineas($t-align, $line-h) {
+    text-align: $t-align;
+    line-height: $line-h;
+}
+
+/* sobre nosotros */
+section.sobre_nosotros {
+
+    .intro {
+        display: flex;
+        height: 400px;
+        margin: 3% 10%;
+        align-items: center;
+        @include lineas(center, 2)
+    }
+
+    .info {
+        h2 {
+            @include lineas(center, 3)
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+
+
+/* contactanos */
+
+section.contactanos_formulario {
+    margin: 30px 10%;
+}
+
+/* carrito */
+#carrito {
+    .center {
+        text-align: center;
+        margin: 50px 10%;
+    }
+
+    img {
+        margin-top: 50px;
+        height: 35vh;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: small;
+    }
+
+    .logo {
+        margin: 0 3%;
+    }
+
+    .footer {
+        h4{
+            font-size: small;
+        }
+        
+    }
+
+
+    .ubicacion-i {
+        padding-left: 50px;
+        padding-bottom: 20px;
+    }
+
+    #fondo_index {
+        text-align: center;
+        @extend %fondo_inicio;
+        padding: 60px 30px;
+
+        h1 {
+            margin: 30px 0;
+            color: $color_h1_fondo;
+        }
+
+        .index_text {
+            @include h_text(100%, 150px, left, $color_fondo_text);
+            margin: 10px 0 5px;
+            font-size: medium;
+        }
+
+    }
+
+    #fondo_nosotros {
+        @extend %fondo_inicio;
+        padding: 100px 50px 0;
+        background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
+
+        .heading_text {
+            @include h_text(100%, 100px, center, $color_fondo_text)
+        }
+    }
+
+    #fondo_heading {
+        @extend %fondo_inicio;
+        padding: 60px 50px 0;
+        // background-image: url("https://thumb.bibliocad.com/images/content/00050000/9000/59288.jpg");
+
+        .heading_text {
+            @include h_text(100%, 40px, center, $color_fondo_text)
+        }
+    }
+
+    /* sobre nosotros */
+    section.sobre_nosotros {
+
+        .intro {
+            display: flex;
+            height: 400px;
+            margin: 3% 10%;
+            align-items: center;
+            @include lineas(center, 2)
+        }
+
+        .info {
+            h2 {
+                @include lineas(center, 3)
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+    /* contactanos */
+
+    section.contactanos_formulario {
+        margin: 20px 10%;
+    }
+
+
+
+}
