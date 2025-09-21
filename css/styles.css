@@ -116,10 +116,9 @@ section#fondo_heading, section.encabezado #fondo_heading, #fondo_heading, #fondo
 }
 #fondo_index div {
   background-color: rgba(34, 47, 62, 0.7450980392);
-  width: 60vw;
-  padding-left: 40px;
+  width: 700px;
+  padding: 10px 40px 30px;
   margin-top: 20px;
-  padding-bottom: 30px;
   border-radius: 0 20px 20px 0;
 }
 #fondo_index div h1 {
