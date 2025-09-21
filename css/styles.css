@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sarina&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +7,18 @@
 }
 
 body {
+  font-size: medium;
   font-family: "Noto Sans", sans-serif;
+}
+body #empresa-1 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+}
+body #empresa-2 {
+  font-family: "Sarina", sans-serif;
 }
 
 li > a {
-  color: #222f3e;
   text-decoration: none;
 }
 
@@ -19,14 +27,13 @@ ul {
 }
 
 nav {
-  font-family: "Bebas Neue", sans-serif;
-  background-color: #D6A2E8;
-  font-size: large;
+  font-family: "Lexend", sans-serif;
+  background-color: #222f3e;
+  font-size: small;
 }
 
 .logo {
-  width: 70px;
-  margin: 0 50px;
+  width: 50px;
 }
 
 .logo img {
@@ -35,6 +42,7 @@ nav {
 
 footer {
   background-color: rgb(241, 245, 245);
+  width: 100%;
 }
 footer .footer {
   margin-left: 20px;
@@ -45,98 +53,176 @@ header {
   top: 0;
   z-index: 100;
 }
+header .navegador {
+  margin: auto 20px;
+}
+header .navbar_carrito {
+  display: none;
+}
 
 header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
   width: 70%;
   margin: 0 auto;
 }
 
+.offcanvas #offcanvasNavbarLabel {
+  color: #fafaff;
+}
+
 .menu-offcanvas {
   justify-content: space-around;
 }
 
+.section_ubicacion {
+  background-color: #f0efeb;
+  width: 100%;
+  padding: 20px;
+}
 .section_ubicacion .ubicacion {
+  justify-content: center;
   align-items: center;
 }
-.section_ubicacion .ubicacion-i {
-  padding-left: 100px;
-  padding-right: 0px;
+.section_ubicacion .direccion {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.section_ubicacion .direccion .ubicacion-i {
+  margin-right: 5px;
+}
+.section_ubicacion .direccion .text {
+  font-size: small;
+}
+.section_ubicacion .direccion .text span {
+  font-size: medium;
+  text-decoration: underline;
+}
+.section_ubicacion .fa-location-dot {
+  color: rgb(182, 6, 6);
 }
 
-#fondo_heading, #fondo_nosotros, #fondo_index {
-  padding: 60px 50px;
-  background-image: url("https://as1.ftcdn.net/jpg/04/37/40/24/1000_F_437402478_K3fhy1ryIqHNMCOJeR0GMGYj5BuXhYes.jpg");
+section#fondo_heading, section.encabezado #fondo_heading, #fondo_heading, #fondo_nosotros, #fondo_index {
+  padding: 100px 50px;
+  background-image: url("../assets/img/backgroud_image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#fondo_index h1 {
-  margin: 50px 0;
-  color: azure;
+#fondo_index {
+  padding-left: 0;
 }
-#fondo_index .index_text {
-  width: 460px;
-  height: 300px;
+#fondo_index div {
+  background-color: rgba(34, 47, 62, 0.7450980392);
+  width: 60vw;
+  padding-left: 40px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 0 20px 20px 0;
+}
+#fondo_index div h1 {
+  padding: 20px 0;
+  color: #fafaff;
+  font-size: 56px;
+}
+#fondo_index div .index_text {
+  width: 500px;
+  height: 200px;
   text-align: left;
-  color: aliceblue;
-  margin: 50px 0;
+  color: #fafaff;
+  margin: 0;
+  font-size: large;
+  font-weight: 300;
+}
+#fondo_index div .index_text span {
+  font-weight: 900;
+  font-style: italic;
 }
 
 #fondo_nosotros {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding: 100px 50px 0;
-  background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
 }
 #fondo_nosotros .heading_text {
   width: 400px;
   height: 100px;
   text-align: left;
-  color: aliceblue;
-  margin: 50px 0;
+  color: #fafaff;
+  margin: 0;
 }
 
 #fondo_heading {
-  padding: 80px 50px 0;
+  padding: 90px 50px 0;
 }
 #fondo_heading .heading_text {
   width: 500px;
   height: 100px;
   text-align: left;
-  color: aliceblue;
-  margin: 50px 0;
+  color: #fafaff;
+  margin: 0;
 }
 
 .card {
-  padding: 10px;
+  justify-content: center;
+  padding: 5px;
 }
 .card img {
-  height: 20vh;
+  display: block;
+  height: 300px;
 }
-
-.precio-b {
+.card .card-title {
+  text-align: center;
+  font-size: 16px;
+}
+.card .precio-b {
   align-items: baseline;
 }
-
-.producto {
-  background-color: rgba(218, 206, 191, 0.438);
+.card .precio-b .card-text {
+  font-weight: bolder;
+}
+.card .precio-b .boton {
+  font-size: medium;
 }
 
-.descripcion_producto {
-  font-size: small;
-  color: #576574;
+section.section_main .card {
+  justify-content: center;
 }
-
-.precio_producto {
-  font-weight: 600;
-  font-size: small;
+section.section_main .card,
+section.section_main .card * {
+  transition: 400ms;
 }
-
-.fa-location-dot {
-  color: rgb(182, 6, 6);
+section.section_main .card .card-img img {
+  display: block;
+  width: 100%;
+  height: 340px;
+}
+section.section_main .card .card-img .card-title {
+  text-align: center;
+  margin-top: 8px;
+}
+section.section_main .card .precio-b {
+  position: absolute;
+  right: 32px;
+  bottom: 15px;
+  left: 32px;
+  opacity: 0;
+}
+section.section_main .card:hover {
+  justify-content: space-between;
+}
+section.section_main .card:hover .card-img {
+  transform: scale(1, 0.83) translateY(-42px);
+}
+section.section_main .card:hover .precio-b {
+  opacity: 1;
 }
 
 .fa-brands {
-  color: #222f
+  color: #222f3e;
 }
 
 p {
@@ -146,113 +232,385 @@ p {
 .boton {
   font-family: "Rubik", sans-serif;
   text-align: center;
-  background-color: #341f97;
+  background-color: #140152;
   color: white;
+  border: 2px solid #140152;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.boton:hover {
+  background-color: rgba(33, 0, 124, 0.8352941176);
+}
+
+/* productos */
+section.encabezado {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+section.encabezado #fondo_heading {
+  padding: 90px 50px 0;
+}
+section.encabezado #fondo_heading .heading_text {
+  width: 500px;
+  height: 100px;
+  text-align: left;
+  color: #fafaff;
+  margin: 0;
+}
+section.encabezado .filtros {
+  background-color: #140152;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+section.section_productos {
+  margin: 260px 40px 40px;
+}
+section.section_productos .card {
+  justify-content: space-between;
+  padding: 0;
+}
+section.section_productos .card img {
+  height: 200px;
+}
+section.section_productos .card .card-title {
+  height: 50px;
+  font-size: 16px;
+  text-align: left;
+}
+section.section_productos .card .precio-b {
+  padding: 5px 10px 0;
+}
+section.section_productos .card .precio-b .card-text {
+  font-weight: bolder;
+}
+section.section_productos .card .precio-b .boton {
+  padding: 0;
+}
+section.section_productos .card .precio-b .boton i {
+  font-size: small;
 }
 
 /* sobre nosotros */
+section.sobre_nosotros {
+  margin-top: 200px;
+}
 section.sobre_nosotros .intro {
   display: flex;
-  height: 400px;
-  margin: 3% 10%;
+  height: 50vh;
+  margin: 2% 15%;
   align-items: center;
   text-align: center;
   line-height: 2;
 }
+section.sobre_nosotros .intro span {
+  background-color: #e4d9ff;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: auto 0;
+}
+section.sobre_nosotros .intro span #empresa-1 {
+  padding-left: 10px;
+}
+section.sobre_nosotros .intro span #empresa-2 {
+  padding-right: 10px;
+}
+section.sobre_nosotros .info {
+  margin: 20px 5%;
+}
 section.sobre_nosotros .info h2 {
+  padding-top: 20px;
   text-align: center;
-  line-height: 3;
 }
 section.sobre_nosotros .info p {
   text-align: justify;
+  line-height: 2;
+}
+section.sobre_nosotros .info .img_nosotros {
+  grid-area: img;
+}
+section.sobre_nosotros .info .img_nosotros img {
+  width: 100%;
+}
+section.sobre_nosotros .info .title {
+  grid-area: title;
+}
+section.sobre_nosotros .info .text {
+  grid-area: texto;
+  width: 500px;
+  margin: 0 auto;
+}
+section.sobre_nosotros .container-principios {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 80px auto;
+  grid-template-areas: "img title" "img texto";
+  align-content: start;
+  gap: 20px;
+}
+section.sobre_nosotros .container-equipo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 80px auto;
+  grid-template-areas: "title img" "texto img";
+  gap: 20px;
 }
 
 /* contactanos */
+section#fondo_heading {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 90px 50px 0;
+}
+section#fondo_heading .heading_text {
+  width: 500px;
+  height: 90px;
+  text-align: left;
+  color: #fafaff;
+  margin: 0;
+}
+
 section.contactanos_formulario {
-  margin: 30px 10%;
+  margin: 200px 10% 20px;
+}
+section.contactanos_formulario label,
+section.contactanos_formulario input {
+  font-size: 14px;
+}
+section.contactanos_formulario .container_button {
+  display: flex;
+  justify-content: flex-end;
+}
+section.contactanos_formulario .container_button .boton {
+  width: 100px;
 }
 
 /* carrito */
+#carrito {
+  margin: 200px 0px 0px;
+}
 #carrito .center {
   text-align: center;
-  margin: 50px 10%;
+  margin: 30px 10%;
 }
 #carrito img {
   margin-top: 50px;
-  height: 35vh;
+  height: 25vh;
 }
 
 @media screen and (max-width: 768px) {
   body {
     font-size: small;
   }
-  .logo {
-    margin: 0 3%;
+  .boton {
+    padding: 2px 10px;
+  }
+  nav {
+    font-size: small;
+  }
+  .navbar .container-fluid {
+    display: flexbox;
+  }
+  .navbar .container-fluid .navbar-brand .logo {
+    order: 1;
+  }
+  .navbar .container-fluid .navbar_carrito {
+    display: contents;
+    order: 2;
+    color: #fafaff;
+    font-size: large;
+  }
+  .navbar .container-fluid .navbar-toggler {
+    order: -1;
+  }
+  .navbar .container-fluid .carrito_text {
+    display: none;
   }
   .footer h4 {
     font-size: small;
   }
-  .ubicacion-i {
-    padding-left: 50px;
-    padding-bottom: 20px;
+  .section_main h3 {
+    font-size: medium;
+    text-align: left;
+    line-height: 0.25;
+  }
+  .section_ubicacion h3 {
+    font-size: medium;
+  }
+  .section_ubicacion .direccion {
+    padding-top: 10px;
+  }
+  .section_ubicacion .text span b {
+    font-size: small;
+  }
+  .section_ubicacion .text p {
+    font-size: x-small;
   }
   #fondo_index {
     text-align: center;
-    padding: 60px 30px;
+    padding: 80px 0;
   }
-  #fondo_index h1 {
-    margin: 30px 0;
-    color: azure;
-  }
-  #fondo_index .index_text {
+  #fondo_index div {
     width: 100%;
+    padding: 5%;
+    border-radius: 0;
+  }
+  #fondo_index div h1 {
+    font-size: 24px;
+  }
+  #fondo_index div .index_text {
+    width: 80vw;
     height: 150px;
-    text-align: left;
-    color: aliceblue;
-    margin: 50px 0;
-    margin: 10px 0 5px;
-    font-size: medium;
+    text-align: center;
+    color: #fafaff;
+    margin: 0;
+    padding-left: 20px;
+    font-size: small;
+  }
+  #fondo_index div .index_text span {
+    font-weight: 700;
+  }
+  #fondo_index div .btn {
+    font-size: smaller;
   }
   #fondo_nosotros {
     padding: 100px 50px 0;
-    background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
   }
   #fondo_nosotros .heading_text {
     width: 100%;
-    height: 100px;
+    height: 80px;
     text-align: center;
-    color: aliceblue;
-    margin: 50px 0;
+    color: #fafaff;
+    margin: 0;
   }
   #fondo_heading {
-    padding: 60px 50px 0;
+    padding: 100px 50px 0;
   }
   #fondo_heading .heading_text {
     width: 100%;
-    height: 40px;
+    height: 100px;
     text-align: center;
-    color: aliceblue;
-    margin: 50px 0;
+    color: #fafaff;
+    margin: 0;
   }
   /* sobre nosotros */
+  section.sobre_nosotros {
+    margin-top: 180px;
+  }
   section.sobre_nosotros .intro {
-    display: flex;
-    height: 400px;
-    margin: 3% 10%;
-    align-items: center;
+    height: 50vh;
+    margin: 5% 10%;
     text-align: center;
     line-height: 2;
   }
+  section.sobre_nosotros .intro p {
+    font-size: smaller;
+  }
+  section.sobre_nosotros .info {
+    margin: 4% 10%;
+  }
   section.sobre_nosotros .info h2 {
     text-align: center;
-    line-height: 3;
+    line-height: 2.5;
+    font-size: medium;
   }
   section.sobre_nosotros .info p {
     text-align: justify;
+    line-height: 2;
+    font-size: smaller;
+  }
+  section.sobre_nosotros .info .text {
+    width: 80vw;
+  }
+  section.sobre_nosotros .info .img_nosotros {
+    width: 80vw;
+  }
+  section.sobre_nosotros .container-principios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section.sobre_nosotros .container-equipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   /* contactanos */
+  section#fondo_heading {
+    padding: 80px 50px 0;
+  }
+  section#fondo_heading .heading_text {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #fafaff;
+    margin: 0;
+  }
   section.contactanos_formulario {
-    margin: 20px 10%;
+    margin: 150px 10% 10px;
+  }
+  section.contactanos_formulario label,
+  section.contactanos_formulario input {
+    font-size: 12px;
+  }
+  section.encabezado .filtros .ordenar span, section.encabezado .filtros .filtrar span, section.encabezado .filtros .busqueda span {
+    font-size: small;
+  }
+  section.encabezado .filtros .ordenar i, section.encabezado .filtros .filtrar i, section.encabezado .filtros .busqueda i {
+    font-size: small;
+  }
+  section.encabezado .filtros .ordenar input, section.encabezado .filtros .filtrar input, section.encabezado .filtros .busqueda input {
+    font-size: smaller;
+  }
+  /* productos */
+  section.encabezado #fondo_heading {
+    padding: 80px 50px 0;
+  }
+  section.encabezado #fondo_heading .heading_text {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #fafaff;
+    margin: 0;
+    font-size: 20px;
+  }
+  section.encabezado .filtros {
+    padding: 10px 30px 5px;
+  }
+  section.encabezado .filtros .busqueda {
+    order: 1;
+    padding: 5px 10px;
+  }
+  section.encabezado .filtros .filtrar {
+    order: 2;
+    padding: 5px 10px;
+  }
+  section.encabezado .filtros .ordenar {
+    order: 3;
+    padding: 5px 10px;
+  }
+  section.section_productos {
+    margin: 250px 30px 20px;
+  }
+  section.section_productos .card img {
+    height: 30vh;
+  }
+  section.section_productos .card .card-title {
+    font-size: 18px;
+    height: auto;
+  }
+  section.section_productos .card .precio-b .card-text {
+    font-size: 16px;
+  }
+  section.section_productos .card .precio-b .boton i {
+    padding: 10px;
+    font-size: large;
+  }
+  /* carrito */
+  #carrito {
+    margin: 150px 0 0;
   }
 }
 

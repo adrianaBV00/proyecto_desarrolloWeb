@@ -8,29 +8,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Contáctanos</title>
+    <meta name="description" content="Presenta los productos agregados al carrito">
+    <meta name="keywords" content="carrito, comprar">
+    <title>Carrito</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo_img.png">
+
 </head>
 
 <body class="d-flex flex-column min-vh-100">
     <header class="bg-light flex-shrink-0">
-        <nav class="navbar fixed-top navbar-expand-lg navegador">
-            <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid navegador">
                 <a class="navbar-brand logo" href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJlJMX9lurbynhcPqg2OjatNxA9mADuXbcNw&s"
-                        alt="logo empresa">
+                    <img src="../assets/img/logo_img.png" alt="logo empresa">
                 </a>
+                <a class="navbar_carrito nav-link active" href="#"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
                 <!-- Boton hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Cuerpo offcanvas -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
 
                     <div class="offcanvas-header">
                         <h3 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-them="dark"
+                            aria-label="Close"></button>
                     </div>
 
                     <div class="offcanvas-body encabezado-offcanvas">
@@ -40,11 +45,14 @@
                             </li>
                             <li class="nav-item"><a class="nav-link" href="./productos.html">PRODUCTOS</a></li>
                             <li class="nav-item"><a class="nav-link" href="./contactanos.html">CONTÁCTANOS</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="#"><i
-                                        class="fa-solid fa-cart-shopping"></i> CARRITO</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link carrito_text active" href="./carrito.html"><i
+                                        class="fa-solid fa-cart-shopping"></i> CARRITO</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -54,18 +62,21 @@
         </section>
 
         <section id="carrito">
-            <div class="text-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/11010/11010851.png" alt="carrito vacio"
-                    class="rounded">
+            <div class="vacio">
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/11010/11010851.png" alt="carrito vacio"
+                        class="rounded">
+                </div>
+
+                <div class="center">
+                    <p class="mx-auto">Tu carrito está vacío</p>
+                </div>
+                <div class="center">
+                    <a type="button" class="btn btn-primary boton" href="../pages/productos.html">Comenzar a
+                        comprar</a>
+                </div>
             </div>
 
-            <div class="center">
-                <p class="mx-auto">Tu carrito está vacío</p>
-            </div>
-            <div class="center">
-                <button type="button" class="btn btn-primary boton">Comenzar a
-                    comprar</button>
-            </div>
 
 
         </section>

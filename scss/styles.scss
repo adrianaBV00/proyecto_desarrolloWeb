@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sarina&display=swap');
 // fonts
 $font_principal: "Noto Sans", sans-serif;
-$font_nav: "Bebas Neue", sans-serif;
+$font_nav: "Lexend", sans-serif;
 $font_boton: "Rubik", sans-serif;
+$font_title: "Lexend", sans-serif;
+$font_title2: "Sarina", sans-serif;
 // colores
-$color_link: #222f3e;
-$color_back_nav: #D6A2E8;
+$color_link: #fafaff;
+$color_back_nav: #222f3e;
 $color_back_foot: rgb(241, 245, 245);
 $color_actual: #5f27cd;
-$color_h1_fondo: azure;
-$color_fondo_text: aliceblue;
+$color_h1_fondo: #fafaff;
+$color_fondo_text: #fafaff;
 $color_producto_back: rgba(218, 206, 191, 0.438);
 $color_producto_text: #576574;
 $color_ubicacion: rgb(182, 6, 6);
+$color_ubicacion_back: #f0efeb;
 $color_redes: #222f3e;
 
-$color_boton: #341f97;
+$color_boton: #140152;
+$color_boton_hover: #21007cd5;
 $color_boton_text: white;
 
 
@@ -27,12 +31,23 @@ $color_boton_text: white;
 }
 
 body {
+    font-size: medium;
     font-family: $font_principal;
+
+    #empresa-1 {
+        font-family: $font_title;
+        font-weight: 500;
+    }
+
+    #empresa-2 {
+        font-family: $font_title2;
+    }
+
 
 }
 
 li>a {
-    color: $color_link;
+    // color: $color_link;
     text-decoration: none;
 }
 
@@ -43,12 +58,14 @@ ul {
 nav {
     font-family: $font_nav;
     background-color: $color_back_nav;
-    font-size: large;
+    font-size: small;
+
+
 }
 
 .logo {
-    width: 70px;
-    margin: 0 50px;
+    width: 50px;
+    // margin: 0 50px;
 }
 
 .logo img {
@@ -57,6 +74,7 @@ nav {
 
 footer {
     background-color: $color_back_foot;
+    width: 100%;
 
     .footer {
         margin-left: 20px;
@@ -67,6 +85,14 @@ header {
     padding: 10px;
     top: 0;
     z-index: 100;
+
+    .navegador {
+        margin: auto 20px;
+    }
+
+    .navbar_carrito {
+        display: none;
+    }
 }
 
 header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
@@ -74,19 +100,53 @@ header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
     margin: 0 auto;
 }
 
+.offcanvas {
+    #offcanvasNavbarLabel {
+        color: $color_link;
+    }
+
+}
+
 .menu-offcanvas {
     justify-content: space-around;
+
+
 }
 
 
 .section_ubicacion {
+    background-color: $color_ubicacion_back;
+    width: 100%;
+    padding: 20px;
+
     .ubicacion {
+        justify-content: center;
         align-items: center;
     }
 
-    .ubicacion-i {
-        padding-left: 100px;
-        padding-right: 0px;
+    .direccion {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .ubicacion-i {
+            margin-right: 5px;
+        }
+
+        .text {
+            span {
+                font-size: medium;
+                text-decoration: underline;
+            }
+
+            font-size: small;
+        }
+    }
+
+    .fa-location-dot {
+        color: $color_ubicacion;
     }
 }
 
@@ -94,8 +154,8 @@ header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
 
 //
 %fondo_inicio {
-    padding: 60px 50px;
-    background-image: url("https://as1.ftcdn.net/jpg/04/37/40/24/1000_F_437402478_K3fhy1ryIqHNMCOJeR0GMGYj5BuXhYes.jpg");
+    padding: 100px 50px;
+    background-image: url("../assets/img/backgroud_image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,77 +166,168 @@ header .navbar div.container-fluid div.offcanvas .encabezado-offcanvas {
     height: $height;
     text-align: $t-align;
     color: $color;
-    margin: 50px 0;
+    margin: 0;
 }
 
 
 #fondo_index {
     @extend %fondo_inicio;
+    padding-left: 0;
 
-    h1 {
-        margin: 50px 0;
-        color: $color_h1_fondo;
+    div {
+        background-color: #222f3ebe;
+        width: 60vw;
+        padding-left: 40px;
+        margin-top: 20px;
+        padding-bottom: 30px;
+        border-radius: 0 20px 20px 0;
+
+        h1 {
+            padding: 20px 0;
+            color: $color_h1_fondo;
+            font-size: 56px;
+        }
+
+        .index_text {
+            @include h_text(500px, 200px, left, $color_fondo_text);
+            font-size: large;
+            font-weight: 300;
+
+            span {
+                font-weight: 900;
+                font-style: italic;
+            }
+
+        }
+
     }
 
-    .index_text {
-        @include h_text(460px, 300px, left, $color_fondo_text)
-    }
+
 
 }
 
 
 #fondo_nosotros {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
     @extend %fondo_inicio;
     padding: 100px 50px 0;
-    // background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
 
     .heading_text {
         @include h_text(400px, 100px, left, $color_fondo_text)
     }
+
 }
 
 #fondo_heading {
     @extend %fondo_inicio;
-    padding: 80px 50px 0;
-    // background-image: url("https://thumb.bibliocad.com/images/content/00050000/9000/59288.jpg");
+    padding: 90px 50px 0;
 
     .heading_text {
         @include h_text(500px, 100px, left, $color_fondo_text)
     }
 }
 
+
+
 .card {
-    padding: 10px;
+    justify-content: center;
+    padding: 5px;
 
     img {
-        height: 20vh;
+        display: block;
+        height: 300px;
     }
+
+    .card-title {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .precio-b {
+        // justify-content: center;
+        align-items: baseline;
+
+        // margin: 10px;
+        .card-text {
+            font-weight: bolder;
+            // text-align: center;
+            // font-size: small;
+        }
+
+        .boton {
+            font-size: medium;
+        }
+
+    }
+
+
 }
 
 
-.precio-b {
-    align-items: baseline;
+
+
+
+
+section.section_main {
+    .card {
+        justify-content: center;
+
+        // position: relative;
+        &,
+        * {
+            transition: 400ms;
+        }
+
+        .card-img {
+            img {
+                display: block;
+                width: 100%;
+                height: 340px;
+            }
+
+            .card-title {
+                text-align: center;
+                margin-top: 8px;
+            }
+        }
+
+        .precio-b {
+            position: absolute;
+            right: 32px;
+            bottom: 15px;
+            left: 32px;
+            opacity: 0;
+        }
+
+        &:hover {
+            justify-content: space-between;
+
+            .card-img {
+                // img{
+                //     transform: scale(1, 0.8);
+                // }
+                transform: scale(1, 0.83) translateY(-42px);
+            }
+
+            .precio-b {
+                opacity: 1;
+            }
+        }
+
+    }
+
 }
 
-.producto {
-    background-color: $color_producto_back;
-}
-
-.descripcion_producto {
-    font-size: small;
-    color: $color_producto_text;
-
-}
-
-.precio_producto {
-    font-weight: 600;
-    font-size: small;
-}
 
 
-.fa-location-dot {
-    color: $color_ubicacion;
-}
+
+
+
+
+
+
 
 .fa-brands {
     color: $color_redes;
@@ -191,6 +342,78 @@ p {
     text-align: center;
     background-color: $color_boton;
     color: $color_boton_text;
+    border: 2px solid $color_boton;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color_boton_hover;
+    }
+
+}
+
+/* productos */
+section.encabezado {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+
+    #fondo_heading {
+        @extend %fondo_inicio;
+        padding: 90px 50px 0;
+
+        .heading_text {
+            @include h_text(500px, 100px, left, $color_fondo_text)
+        }
+    }
+
+    .filtros {
+        background-color: $color_boton;
+        width: 100%;
+        padding: 10px 50px;
+    }
+
+}
+
+section.section_productos {
+    margin: 260px 40px 40px;
+
+    .card {
+        justify-content: space-between;
+        padding: 0;
+
+        img {
+            height: 200px;
+        }
+
+        .card-title {
+            height: 50px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+
+        .precio-b {
+            padding: 5px 10px 0;
+
+            .card-text {
+                font-weight: bolder;
+            }
+
+            .boton {
+                padding: 0;
+
+                i {
+                    font-size: small;
+                }
+            }
+
+        }
+
+    }
+
+
+
 }
 
 
@@ -201,44 +424,135 @@ p {
 
 /* sobre nosotros */
 section.sobre_nosotros {
+    margin-top: 200px;
 
     .intro {
         display: flex;
-        height: 400px;
-        margin: 3% 10%;
+        height: 50vh;
+        margin: 2% 15%;
         align-items: center;
-        @include lineas(center, 2)
+        @include lineas(center, 2);
+
+        span {
+            background-color: #e4d9ff;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: auto 0;
+
+            #empresa-1 {
+                padding-left: 10px;
+            }
+
+            #empresa-2 {
+                padding-right: 10px;
+            }
+        }
     }
 
     .info {
+        margin: 20px 5%;
+
         h2 {
-            @include lineas(center, 3)
+            padding-top: 20px;
+            text-align: center;
         }
 
         p {
-            text-align: justify;
+            @include lineas(justify, 2)
         }
+
+        .img_nosotros {
+            grid-area: img;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .title {
+            grid-area: title;
+        }
+
+        .text {
+            grid-area: texto;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+    }
+
+
+
+
+
+
+    .container-principios {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 80px auto;
+        grid-template-areas:
+            'img title'
+            'img texto';
+        align-content: start;
+        gap: 20px;
+    }
+
+    .container-equipo {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 80px auto;
+        grid-template-areas:
+            'title img'
+            'texto img';
+        gap: 20px;
     }
 }
 
 
 
 /* contactanos */
+section#fondo_heading {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    @extend %fondo_inicio;
+    padding: 90px 50px 0;
+
+    .heading_text {
+        @include h_text(500px, 90px, left, $color_fondo_text);
+    }
+
+}
 
 section.contactanos_formulario {
-    margin: 30px 10%;
+    margin: 200px 10% 20px;
+
+    label,
+    input {
+        font-size: 14px;
+    }
+
+    .container_button {
+        display: flex;
+        justify-content: flex-end;
+
+        .boton {
+            width: 100px;
+        }
+    }
 }
 
 /* carrito */
 #carrito {
+    margin: 200px 0px 0px;
     .center {
         text-align: center;
-        margin: 50px 10%;
+        margin: 30px 10%;
     }
 
     img {
         margin-top: 50px;
-        height: 35vh;
+        height: 25vh;
     }
 
 }
@@ -246,39 +560,112 @@ section.contactanos_formulario {
 @media screen and (max-width: 768px) {
     body {
         font-size: small;
+
     }
 
-    .logo {
-        margin: 0 3%;
+    .boton {
+        // font-size: small;
+        padding: 2px 10px;
+    }
+
+    nav {
+        font-size: small;
+
+
+    }
+
+    .navbar .container-fluid {
+        display: flexbox;
+
+        .navbar-brand .logo {
+            order: 1;
+        }
+
+        .navbar_carrito {
+            display: contents;
+            order: 2;
+            color: $color_link;
+            font-size: large;
+        }
+
+        .navbar-toggler {
+            order: -1;
+        }
+
+        .carrito_text {
+            display: none;
+        }
     }
 
     .footer {
-        h4{
+        h4 {
             font-size: small;
         }
-        
+
     }
 
+    .section_main {
 
-    .ubicacion-i {
-        padding-left: 50px;
-        padding-bottom: 20px;
+        h3 {
+            font-size: medium;
+            @include lineas(left, 0.25)
+        }
+
+
     }
+
+    .section_ubicacion {
+        h3 {
+            font-size: medium;
+        }
+
+        .direccion {
+            padding-top: 10px;
+        }
+
+        .text {
+            span b {
+                font-size: small;
+            }
+
+            p {
+                font-size: x-small;
+            }
+
+        }
+    }
+
 
     #fondo_index {
         text-align: center;
         @extend %fondo_inicio;
-        padding: 60px 30px;
+        padding: 80px 0;
 
-        h1 {
-            margin: 30px 0;
-            color: $color_h1_fondo;
-        }
+        // margin: 0;
+        div {
+            width: 100%;
+            padding: 5%;
+            border-radius: 0;
 
-        .index_text {
-            @include h_text(100%, 150px, left, $color_fondo_text);
-            margin: 10px 0 5px;
-            font-size: medium;
+            h1 {
+                font-size: 24px;
+            }
+
+            .index_text {
+                @include h_text(80vw, 150px, center, $color_fondo_text);
+                padding-left: 20px;
+                font-size: small;
+
+                span {
+                    font-weight: 700;
+                }
+
+            }
+
+            .btn {
+                font-size: smaller;
+            }
+
         }
 
     }
@@ -286,50 +673,187 @@ section.contactanos_formulario {
     #fondo_nosotros {
         @extend %fondo_inicio;
         padding: 100px 50px 0;
-        background-image: url("https://www.xtrafondos.com/wallpapers/textura-reciclado-arrugado-azul-64.jpg");
+
+        .heading_text {
+            @include h_text(100%, 80px, center, $color_fondo_text)
+        }
+
+    }
+
+    #fondo_heading {
+        @extend %fondo_inicio;
+        padding: 100px 50px 0;
 
         .heading_text {
             @include h_text(100%, 100px, center, $color_fondo_text)
         }
     }
 
-    #fondo_heading {
-        @extend %fondo_inicio;
-        padding: 60px 50px 0;
-        // background-image: url("https://thumb.bibliocad.com/images/content/00050000/9000/59288.jpg");
-
-        .heading_text {
-            @include h_text(100%, 40px, center, $color_fondo_text)
-        }
-    }
-
     /* sobre nosotros */
     section.sobre_nosotros {
+        margin-top: 180px;
 
         .intro {
-            display: flex;
-            height: 400px;
-            margin: 3% 10%;
-            align-items: center;
-            @include lineas(center, 2)
+            height: 50vh;
+            margin: 5% 10%;
+            @include lineas(center, 2);
+
+            p {
+                font-size: smaller;
+            }
         }
 
         .info {
+            margin: 4% 10%;
+
             h2 {
-                @include lineas(center, 3)
+                @include lineas(center, 2.5);
+                font-size: medium;
             }
 
             p {
-                text-align: justify;
+                @include lineas(justify, 2);
+                font-size: smaller;
+            }
+
+            .text {
+                width: 80vw;
+            }
+
+            .img_nosotros {
+                width: 80vw;
+
             }
         }
+
+
+
+
+        .container-principios {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .container-equipo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
     }
 
     /* contactanos */
+    section#fondo_heading {
+        @extend %fondo_inicio;
+        padding: 80px 50px 0;
+
+        .heading_text {
+            @include h_text(100%, 50px, center, $color_fondo_text);
+        }
+
+    }
+
 
     section.contactanos_formulario {
-        margin: 20px 10%;
+        margin: 150px 10% 10px;
+
+        label,
+        input {
+            font-size: 12px;
+        }
+
     }
+
+    %filtros {
+        span {
+            font-size: small;
+        }
+
+        i {
+            font-size: small;
+        }
+
+        input {
+            font-size: smaller;
+        }
+    }
+
+    /* productos */
+    section.encabezado {
+        #fondo_heading {
+            @extend %fondo_inicio;
+            padding: 80px 50px 0;
+
+            .heading_text {
+                @include h_text(100%, 50px, center, $color_fondo_text);
+                font-size: 20px;
+            }
+        }
+
+        .filtros {
+            // display: flexbox;
+            padding: 10px 30px 5px;
+
+            .busqueda {
+                order: 1;
+                padding: 5px 10px;
+                @extend %filtros;
+            }
+
+            .filtrar {
+                order: 2;
+                @extend %filtros;
+                padding: 5px 10px;
+            }
+
+            .ordenar {
+                order: 3;
+                @extend %filtros;
+                padding: 5px 10px;
+            }
+
+
+        }
+    }
+
+
+    section.section_productos {
+        margin: 250px 30px 20px;
+
+        .card {
+            img {
+                height: 30vh;
+            }
+            .card-title{
+                font-size: 18px;
+                height: auto;
+            }
+
+            .precio-b {
+                .card-text{
+                    font-size: 16px;
+                }
+
+                .boton {
+                    i {
+                        padding: 10px;
+                        font-size: large;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    /* carrito */
+    #carrito{
+        margin: 150px 0 0;
+    }
+
+
 
 
 

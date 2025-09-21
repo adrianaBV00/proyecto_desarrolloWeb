@@ -8,27 +8,32 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <meta name="description" content="Comunicate con el equipo de Dormir con estilo">
+  <meta name="description" content="formulario, contactanos">
   <title>Contáctanos</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo_img.png">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
   <header class="bg-light flex-shrink-0">
-    <nav class="navbar fixed-top navbar-expand-lg navegador">
-      <div class="container-fluid">
-        <a class="navbar-brand logo" href="#">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJlJMX9lurbynhcPqg2OjatNxA9mADuXbcNw&s"
-            alt="logo empresa" />
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid navegador">
+        <a class="navbar-brand logo" href="../index.html">
+          <img src="../assets/img/logo_img.png" alt="logo empresa" />
         </a>
+        <a class="navbar_carrito" href="./carrito.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
         <!-- Boton hamburguesa -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Cuerpo offcanvas -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h3 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h3>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-theme="dark"
+              aria-label="Close"></button>
           </div>
 
           <div class="offcanvas-body encabezado-offcanvas">
@@ -46,7 +51,8 @@
                 <a class="nav-link active" href="#">CONTÁCTANOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i> CARRITO</a>
+                <a class="nav-link carrito_text" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i>
+                  CARRITO</a>
               </li>
             </ul>
           </div>
@@ -61,20 +67,22 @@
 
     <section class="contactanos_formulario">
       <form class="row g-3 needs-validation" action="#" method="post" enctype="application/x-www-form-urlencoded">
-        <div class="mb-3">
+        <div class="mb-1">
           <label class="form-label" for="nombre_completo">Nombre completo</label>
           <input class="form-control" type="text" name="nombre_completo" id="nombre_completo" />
         </div>
-        <div class="mb-3">
+        <div class="mb-1">
           <label class="form-label" for="email">Correo electrónico</label>
           <input class="form-control" type="email" name="email" id="email" />
         </div>
-        <div class="mb-3">
+        <div class="mb-1">
           <label class="form-label" for="mensaje">Mensaje</label>
-          <textarea class="form-control" name="mensaje" id="mensaje" rows="10"></textarea>
+          <textarea class="form-control" name="mensaje" id="mensaje" rows="5"></textarea>
+        </div>
+        <div class="container_button">
+          <button type="submit" class="btn btn-primary boton">Enviar</button>
         </div>
 
-        <button type="submit" class="boton col-2 offset-10">Enviar</button>
       </form>
     </section>
   </main>

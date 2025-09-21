@@ -4,36 +4,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy: frame-ancestors 'none'">
   <script src="https://kit.fontawesome.com/003da4fba2.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/styles.css" />
-  <title>Inicio</title>
+  <meta name="description" content="Pagina principal de la empresa Dormir con estilo">
+  <meta name="keywords" content="dormir con estilo, pijamas, pantunflas, frazadas">
+  <title>Pagina principal</title>
+  <link rel="icon" type="image/png" href="./assets/img/logo_img.png">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column flex-fill min-vh-100">
   <header class="bg-light flex-shrink-0">
-    <nav class="navbar fixed-top navbar-expand-lg navegador">
-      <div class="container-fluid">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid navegador">
         <a class="navbar-brand logo" href="#">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJlJMX9lurbynhcPqg2OjatNxA9mADuXbcNw&s"
-            alt="logo empresa" />
+          <img src="./assets/img/logo_img.png" alt="logo empresa" />
         </a>
+
+        <a class="nav-link navbar_carrito " href="./pages/carrito.html"><i
+            class="fa-solid fa-cart-shopping fa-lg"></i></a>
+
         <!-- Boton hamburguesa -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Cuerpo offcanvas -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h3 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h3>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" data-bs-theme="dark"
+              aria-label="Close"></button>
           </div>
 
           <div class="offcanvas-body encabezado-offcanvas">
             <ul class="navbar-nav flex-grow-1 pe-3 menu-offcanvas">
-              <li class="nav-item actual_page">
+              <li class="nav-item">
                 <a class="nav-link active" href="#">INICIO</a>
               </li>
               <li class="nav-item">
@@ -46,109 +55,139 @@
                 <a class="nav-link" href="./pages/contactanos.html">CONTÁCTANOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/carrito.html"><i class="fa-solid fa-cart-shopping"></i> CARRITO</a>
+                <a class="nav-link carrito_text" href="./pages/carrito.html"><i class="fa-solid fa-cart-shopping"></i>
+                  CARRITO</a>
               </li>
+
             </ul>
           </div>
         </div>
+
       </div>
     </nav>
   </header>
   <main class="d-flex flex-column flex-fill">
     <section id="fondo_index">
-      <h1>Nombre Empresa</h1>
-      <h4 class="index_text">
-        Sollicitant homines non sunt nisi quam formae rerum principiis
-        opiniones. Mors enim est terribilis ut Socrati aliud esse apparet. Sed
-        timor mortis est notio terribile. Cum igitur impediantur turbentur aut
-        dolere videamus aliis non tribuunt nisi nobis hoc est, in principiis
-      </h4>
+      <div>
+        <h1><span id="empresa-1">Dormir</span> <span id="empresa-2">con Estilo</span></h1>
+        <p class="index_text">
+          Aquí encontrarás <span>pijamas</span> para adultos y niños con diseños divertidos y coloridos,
+          <span>pantuflas</span> suaves y cómodas para mantener tus pies calientes y felices,
+          y <span>ropa para dormir</span> de alta calidad y duradera.
 
-      <button type="button" class="btn btn-primary">
-        COMPRA AHORA
-      </button>
+        </p>
+        <a href="./pages/productos.html" type="button" class="btn btn-light btn-lg">
+          COMPRA AHORA
+        </a>
+      </div>
+
+
     </section>
     <section class="section_main m-3">
       <h3>NUESTROS MEJORES PRODUCTOS</h3>
       <hr />
-      <div class="row row-cols-1 row-cols-sm-4 g-3">
+      <div class="row row-cols-1 row-cols-sm-4 g-3 mx-2 justify-content-center">
         <div class="col">
           <div class="card">
-            <img
-              src="https://thumbs.dreamstime.com/b/dibujo-de-icono-caricatura-caja-concepto-producto-o-maquinaria-listo-para-ser-entregado-al-cliente-simple-157425701.jpg"
-              class="card-img-top" alt="card_best_product_1" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Quando ambulabat agendis admonere te qualis actio. Si ad
-                corpus, quae
-              </p>
-              <a href="#" class="btn btn-primary">Conoce más</a>
+
+            <div class="card-img">
+              <img src="./assets/img/pantunflas_pochita.png" class="card-img-top" alt="Pantunflas pochita" />
+              <h5 class="card-title">Pantunflas pochita</h5>
             </div>
+            <div class="row precio-b">
+              <p class="card-text  col-9">
+                $899.00
+              </p>
+              <button type="button" class="btn btn-primary boton col-3">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+
+
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <img
-              src="https://thumbs.dreamstime.com/b/dibujo-de-icono-caricatura-caja-concepto-producto-o-maquinaria-listo-para-ser-entregado-al-cliente-simple-157425701.jpg"
-              class="card-img-top" alt="card_best_product_2" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Quando ambulabat agendis admonere te qualis actio. Si ad
-                corpus, quae
-              </p>
-              <a href="#" class="btn btn-primary">Conoce más</a>
+            <div class="card-img">
+              <img src="./assets/img/pijama_dinosaurio_nino.png" class="card-img-top" alt="Pijama de dinosaurio niño" />
+              <h5 class="card-title">Pijama de dinosaurio niño</h5>
+              <!-- <div class="card-body"> -->
             </div>
+
+
+            <div class="row precio-b">
+              <p class="card-text col-9">
+                $599.00
+              </p>
+              <button type="button" class="btn btn-primary boton col-3">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <!-- </div> -->
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <img
-              src="https://thumbs.dreamstime.com/b/dibujo-de-icono-caricatura-caja-concepto-producto-o-maquinaria-listo-para-ser-entregado-al-cliente-simple-157425701.jpg"
-              class="card-img-top" alt="card_best_product_3" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Quando ambulabat agendis admonere te qualis actio. Si ad
-                corpus, quae
-              </p>
-              <a href="#" class="btn btn-primary">Conoce más</a>
+            <div class="card-img">
+              <img src="./assets/img/almohada.jpg" class="card-img-top" alt="Almohada abrazable" />
+
+              <h5 class="card-title">Almohada abrazable rosa</h5>
             </div>
+            <div class="row precio-b">
+              <p class="card-text  col-9">
+                $499.00
+              </p>
+              <button type="button" class="btn btn-primary boton col-3">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <img
-              src="https://thumbs.dreamstime.com/b/dibujo-de-icono-caricatura-caja-concepto-producto-o-maquinaria-listo-para-ser-entregado-al-cliente-simple-157425701.jpg"
-              class="card-img-top" alt="card_best_product_4" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Quando ambulabat agendis admonere te qualis actio. Si ad
-                corpus, quae
+            <div class="card-img">
+              <img src="./assets/img/antifaz_dormir.jpg" class="card-img-top" alt="antifaz para dormir" />
+
+              <h5 class="card-title">Antifaz para dormir</h5>
+            </div>
+            <div class="row precio-b">
+              <p class="card-text  col-9">
+                $649.00
               </p>
-              <a href="#" class="btn btn-primary">Conoce más</a>
+              <button type="button" class="btn btn-primary boton col-3">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
             </div>
           </div>
+
         </div>
       </div>
     </section>
-    
-    <section class="section_ubicacion p-1 m-3">
-      <h3>ENCUÉNTRANOS EN:</h3>
-      <div class="row ubicacion me-auto">
-        <iframe src="https://www.google.com/maps" height="400" title="Ubicacion" class="col-12 col-md-8"></iframe>
 
-        <div class="col-2 col-md-1 ubicacion-i">
-          <i class="fa-solid fa-location-dot fa-2xl"></i>
+    <section class="section_ubicacion">
+      <h3>ENCUÉNTRANOS EN:</h3>
+      <div class="row ubicacion">
+        <div class="col-12 col-md-8">
+          <iframe width="100%" height="400" title="Ubicacion"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=solesta+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+              href="https://www.mapsdirections.info/calcular-la-poblacion-en-un-mapa/">Medir población</a></iframe>
         </div>
-        <div class="col-10 col-md-3">
-          <p>
-            Quando ambulabat agendis admonere te qualis actio. Si ad corpus,
-            quae
-          </p>
+
+        <div class="col-12 col-md-4 direccion">
+          <div class="ubicacion-i">
+            <i class="fa-solid fa-location-dot fa-xl"></i>
+          </div>
+          <div class="text">
+            <p>
+              <span><b>Dormir con estilo</b></span>
+              <br>
+              Atlixcáyotl 4931, Reserva Territorial Atlixcáyotl, Centros Comerciales Desarrollo Atlixcayotl, 72193
+              Heroica Puebla de Zaragoza, Pue.
+            </p>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -167,6 +206,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>
