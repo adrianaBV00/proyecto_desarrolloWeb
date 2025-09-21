@@ -66,23 +66,25 @@
     </section>
 
     <section class="contactanos_formulario">
-      <form class="row g-3 needs-validation" action="https://formsubmit.co/adriana_13_19@hotmail.com" method="post" enctype="application/x-www-form-urlencoded">
+      <form class="row g-3 needs-validation" action="https://formsubmit.co/adriana_13_19@hotmail.com" method="post"
+        enctype="application/x-www-form-urlencoded">
         <div class="mb-1">
           <label class="form-label" for="nombre_completo">Nombre completo</label>
-          <input class="form-control" type="text" name="nombre_completo" id="nombre_completo" />
+          <input class="form-control" type="text" name="nombre_completo" id="nombre_completo" required/>
         </div>
         <div class="mb-1">
           <label class="form-label" for="email">Correo electrónico</label>
-          <input class="form-control" type="email" name="email" id="email" />
+          <input class="form-control" type="email" name="email" id="email" required />
         </div>
         <div class="mb-1">
           <label class="form-label" for="mensaje">Mensaje</label>
-          <textarea class="form-control" name="mensaje" id="mensaje" rows="5"></textarea>
+          <textarea class="form-control" name="mensaje" id="mensaje" rows="5" required></textarea>
         </div>
         <div class="container_button">
           <button type="submit" class="btn btn-primary boton">Enviar</button>
         </div>
-
+        <!-- Configuraciones ocultas -->
+        <input type="hidden" name="_next" value="#">
       </form>
     </section>
   </main>
